@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Day Planner | TravelBrain AI</title><link rel="stylesheet" href="/static/css/styles.css"></head>
+<body class="tool-page"><main class="tool-shell">
+  <header class="tool-header"><a class="tool-brand" href="/">✈ TravelBrain AI</a><nav class="tool-nav"><a href="/">Trip chat</a><a href="/budget">Trip budget</a><label class="currency-control" for="routeCurrency">Currency <select id="routeCurrency"><option value="INR">INR ₹</option><option value="USD">USD $</option><option value="EUR">EUR €</option><option value="GBP">GBP £</option><option value="AED">AED د.إ</option><option value="JPY">JPY ¥</option></select></label></nav></header>
+  <h1 class="tool-title">Your day-by-day planner</h1><p class="tool-subtitle">Turn the trip you're discussing with TravelBrain into a practical day plan. Compare different paces, see estimated distances between stops, include meal breaks, and keep buffer time so the day doesn't feel rushed.</p>
+  <section class="trip-context"><strong id="tripContextTitle">Not linked to a trip yet</strong><p id="tripContextText">Start or update a trip in the main TravelBrain chat. Your latest discussion will be shared here automatically.</p></section>
+  <form id="routeForm" class="tool-card">
+    <div class="tool-grid">
+      <label class="tool-field">Destination city / area <input id="destination" placeholder="e.g. Jaipur, Rajasthan" required></label>
+      <label class="tool-field">Hotel name or address <input id="hotelName" placeholder="Use the hotel from your trip plan if known"></label>
+      <label class="tool-field">Daily start time <input id="startTime" type="time" value="09:00" required></label>
+      <label class="tool-field">Return to hotel by <input id="endTime" type="time" value="19:00" required></label>
+      <label class="tool-field">Travel style <select id="profile"><option value="balanced">Balanced</option><option value="luxury">Luxury & relaxation</option><option value="adventure">Adventure & outdoors</option><option value="culture">Culture & sightseeing</option><option value="food">Food & local experiences</option><option value="family">Family-friendly</option></select></label>
+      <label class="tool-field">Buffer between attractions <select id="buffer"><option value="10">10 minutes · efficient</option><option value="20" selected>20 minutes · balanced</option><option value="35">35 minutes · relaxed</option></select></label>
+    </div>
+    <label class="tool-field" style="margin-top:14px">Places you want to visit <textarea id="attractions" placeholder="One place per line, for example:\nHawa Mahal\nCity Palace\nJantar Mantar" required></textarea></label>
+    <p class="tool-muted" style="margin-top:7px">TravelBrain will research the selected places and nearby local food options using the existing web-search integration. It will try to check opening hours before scheduling.</p>
+    <button class="tool-button" type="submit" id="planButton">Build my day-plan options</button><p id="error" class="tool-alert" role="alert" hidden></p>
+  </form>
+  <section id="results" class="tool-card" hidden aria-live="polite">
+    <h2 id="resultTitle">Your itinerary options</h2><p id="resultSummary" class="tool-muted"></p><div id="options"></div>
+    <h2 style="margin-top:26px">Famous food and meal stops nearby</h2><p class="tool-muted">These are researched suggestions. Check current opening times and availability before visiting.</p><div id="foodPlaces"></div>
+    <h2 style="margin-top:26px">Planning notes</h2><div id="notes"></div><p id="travelNotice" class="tool-muted" style="margin-top:14px"></p>
+  </section>
+</main><script src="/static/js/route_planner.js"></script></body></html>

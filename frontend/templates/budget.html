@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trip Budget | TravelBrain AI</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="tool-page">
+<main class="tool-shell">
+  <header class="tool-header">
+    <a class="tool-brand" href="/">✈ TravelBrain AI</a>
+    <nav class="tool-nav"><a href="/">Trip chat</a><a href="/route-planner">Day planner</a><label class="currency-control" for="budgetCurrency">Currency <select id="budgetCurrency"><option value="INR">INR ₹</option><option value="USD">USD $</option><option value="EUR">EUR €</option><option value="GBP">GBP £</option><option value="AED">AED د.إ</option><option value="JPY">JPY ¥</option></select></label></nav>
+  </header>
+  <h1 class="tool-title">Budget for your trip</h1>
+  <p class="tool-subtitle">This analyzer uses the trip you discussed with TravelBrain as context. Choose the same currency as your trip, enter or adjust your estimates, and get a profile-aware breakdown with a contingency buffer.</p>
+  <section class="trip-context" id="tripContext"><strong id="tripContextTitle">No trip linked yet</strong><p id="tripContextText">Start a trip in the TravelBrain chat first. Your latest trip discussion will appear here automatically.</p></section>
+  <form id="budgetForm" class="tool-card">
+    <div class="tool-grid">
+      <label class="tool-field">Total trip budget <input id="budget" type="number" min="0.01" step="0.01" value="50000" required></label>
+      <label class="tool-field">Trip duration (days) <input id="duration" type="number" min="1" max="365" value="5" required></label>
+      <label class="tool-field">Travel style <select id="profile"><option value="balanced">Balanced</option><option value="luxury">Luxury & relaxation</option><option value="adventure">Adventure & outdoors</option><option value="culture">Culture & sightseeing</option><option value="food">Food & local experiences</option><option value="family">Family-friendly</option></select></label>
+      <label class="tool-field">Travellers <input id="travellers" type="number" min="1" max="50" value="1" required></label>
+    </div>
+    <h2 style="margin:22px 0 10px">Your current estimates</h2>
+    <p class="tool-muted">All amounts use the selected trip currency. Estimates are not automatically converted when you change currency.</p>
+    <div class="tool-grid" style="margin-top:12px">
+      <label class="tool-field">Flights / intercity travel <input id="travel" type="number" min="0" step="0.01" value="0" required></label>
+      <label class="tool-field">Accommodation <input id="accommodation" type="number" min="0" step="0.01" value="0" required></label>
+      <label class="tool-field">Food and meals <input id="food" type="number" min="0" step="0.01" value="0" required></label>
+      <label class="tool-field">Local transport <input id="local_transport" type="number" min="0" step="0.01" value="0" required></label>
+      <label class="tool-field">Activities and sightseeing <input id="activities" type="number" min="0" step="0.01" value="0" required></label>
+      <label class="tool-field">Other / emergency expenses <input id="miscellaneous" type="number" min="0" step="0.01" value="0" required></label>
+    </div>
+    <button class="tool-button" type="button" id="estimateTrip">Estimate costs from my trip</button>
+    <p id="estimateStatus" class="tool-muted" role="status" style="margin-top:10px"></p>
+    <div id="estimateAssumptions" class="tool-muted"></div>
+    <button class="tool-button" type="submit">Analyze this trip budget</button>
+    <p id="error" class="tool-alert" role="alert" hidden></p>
+  </form>
+  <section id="results" class="tool-card" hidden aria-live="polite">
+    <h2>Budget overview</h2>
+    <div class="tool-metric-grid"><div class="tool-metric"><span>Total budget</span><strong id="outBudget"></strong></div><div class="tool-metric"><span>Estimated trip cost</span><strong id="outTotal"></strong></div><div class="tool-metric"><span id="balanceLabel">Remaining</span><strong id="outBalance"></strong></div></div>
+    <h3 style="margin-top:20px">Your estimates</h3><div id="breakdown"></div>
+    <h3 style="margin-top:20px">Suggested allocation for your travel style</h3><div id="allocation"></div>
+    <h3 style="margin-top:20px">What to adjust and why</h3><div id="recommendation"></div>
+    <p id="disclaimer" class="tool-muted" style="margin-top:14px"></p>
+  </section>
+</main>
+<script src="/static/js/budget.js"></script>
+</body></html>
