@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 # ✈️ TravelBrain
 
@@ -572,3 +573,7 @@ providers:
 <div align="center">
 **TravelBrain --- Plan less. Explore more.**
 </div>
+=======
+# TravelBean
+AI-powered multi-agent travel planning system with A* route optimization and intelligent budget analysis
+>>>>>>> 0c510bcafaf96fa0c62563a7bda45c87950126c6
