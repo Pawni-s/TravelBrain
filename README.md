@@ -1,7 +1,6 @@
 <div align="center">
-## ✈️ TravelBrain
-
-### Your AI-powered multi-agent travel planning assistant
+  <h1>✈️ TravelBrain</h1>
+  <h3>Your AI-powered multi-agent travel planning assistant</h3>
 
 Plan smarter trips with AI-powered research, personalized budgets, and
 optimized day-wise itineraries.
