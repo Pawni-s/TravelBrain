@@ -568,7 +568,7 @@ providers:
 ------------------------------------------------------------------------
 
 <div align="center">
-**TravelBrain --- Plan less. Explore more.**
+  <h3>TravelBrain — Plan less. Explore more. ✈️</h3>
 </div>
 =======
 # TravelBean
