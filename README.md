@@ -540,14 +540,6 @@ Contributions, suggestions, and bug reports are welcome.
 
 Please do not include secrets, API keys, or private configuration files
 in commits.
-
-------------------------------------------------------------------------
-
-## 📄 License
-
-This project is licensed under the **GNU General Public License v3.0
-(GPL-3.0)**. See the [LICENSE](LICENSE) file for details.
-
 ------------------------------------------------------------------------
 
 ## 🙌 Acknowledgements
