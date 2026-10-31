@@ -568,9 +568,6 @@ providers:
 ------------------------------------------------------------------------
 
 <div align="center">
-  <h3>TravelBrain — Plan less. Explore more. ✈️</h3>
+  <h3>TravelBrain — Plan less. Explore more.
+    AI-powered multi-agent travel planning system with A* route optimization and intelligent budget analysis✈️</h3>
 </div>
-=======
-# TravelBean
-AI-powered multi-agent travel planning system with A* route optimization and intelligent budget analysis
->>>>>>> 0c510bcafaf96fa0c62563a7bda45c87950126c6
