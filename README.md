@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 <div align="center">
-# ✈️ TravelBrain
+## ✈️ TravelBrain
 
 ### Your AI-powered multi-agent travel planning assistant
 
@@ -10,7 +9,6 @@ optimized day-wise itineraries.
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white)
 ![LangGraph](https://img.shields.io/badge/LangGraph-Agent%20Orchestration-1C3C3C)
-![License](https://img.shields.io/badge/License-GPL--3.0-blue)
 </div>
 
 ------------------------------------------------------------------------
